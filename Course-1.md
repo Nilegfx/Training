@@ -184,3 +184,95 @@ In above sample, `size-small` is a modifier for `avatar` element.
 1. What is the WHATWG? http://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F
 2. Proposal to Adopt HTML5 http://lists.w3.org/Archives/Public/public-html/2007Apr/0429.html
 3. HTML is the new HTML5 http://blog.whatwg.org/html-is-the-new-html5
+
+
+
+=================== 22May =============
+### Internal reminders
+* references
+* less theoreticals more practicals
+
+
+
+
+
+### technical terms and clarifications
+* Module vs component (wording)
+* NEVER USE INLINE STYLING 
+
+* Block, inline and inline-block differents 
+- don't place block element inside inline element
+- use inline-block when you want to have padding, margins or widths
+
+
+
+
+### how to develop your page layout
+* viewport meta tag
+* doctype
+* html's conditional class names (usage of modernaizer vs the conitional classes)
+* script and stylesheet palcment (top and bottom of the document)
+* create a sperate debugging stylesheet to outline/differentiate between your elements 
+
+
+* build your layout sepratly
+
+(example needed)
+* Don't start with the floats before you check the accessibility and document flow (top to bottom)
+* don't place your borders or "custom" paddings/margins in the layout divs/tags
+
+* create a sperate/specific styles for each page when small layout change is required 
+create seprate styles for different layouts, the same layout class should look exactly the same across pages, if you want to have a different layout you need to create a new one, don't modify the existing one
+
+
+2- How to develop a module based on best practices and "enhanced" BEM naming convension 
+
+* good component analysis/disassembling/grouping the similar components leads to flexibile/maintainable componenet development
+
+* develop without any page/widths dependencies
+
+* use precentages as much as possible
+
+Without
+1- box module
+		- header
+			- title
+				- badge
+			- actions
+		- content
+		- footer
+
+With BEM
+1- box module
+		- box-header
+			- box-title
+				- box-badge
+			- box-actions
+		- box-content
+		- box-footer
+
+
+* WHAT IS BEM
+(SCREENSHOOTS and one or two paragraphs)
+
+module inside module
+2- people module (business card)
+	- image
+	- details
+
+
+
+
+EXAM QUESTIONS (15)
+2 questions for the naming convnsion
+2 qustions about placing block element inside inline element
+3 questions about the analysis and disassembling modules
+
+
+
+============= SMACSS =============
+* utilities and helper classes should take its own place in your css structuring
+* do as much as you can in the css before you start doing your js, let the js exchange the classes only "if possible"
+* css specificity (calculation and avoid using !important)
+* clearfix 
+
